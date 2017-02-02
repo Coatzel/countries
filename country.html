@@ -1,0 +1,16 @@
+
+<a ng-href="#!/countries.html"><button> Back</button></a>
+<br>
+<h1>{{countryName}}</h1>
+<p>Country Population: {{population}}</p>
+<p>Area: {{area}}</p>
+<p>Capital: {{capital}}<p>
+<p>Continent:{{continent}}</p>
+
+<img src="http://www.geonames.org/flags/x/{{lowcode}}.gif" />
+<img id='myImage' src="http://www.geonames.org/img/country/250/{{upcode}}.png" />
+
+<h2> Neighbours </h2>
+<span ng-repeat="neighbour in neighbours">
+<p><a ng-href="#!/{{ neighbour.countryCode }}/capital">{{ neighbour.countryName }}</p>
+</span>

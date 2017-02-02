@@ -1,0 +1,25 @@
+
+
+
+<div style="text-align:center">
+  <p> Click on any country's row to learn more</p>
+
+  <a ng-href="#!/"><button> Home</button></a>
+
+
+<table style="padding: 50px; position: relative; left: 450px">
+  <thead>
+    <tr>
+      <th> Country Code</th>
+      <th> Capital </th>
+      <th> Country </th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="Object in countryData" ng-click="countryDetails(Object.countryCode)">
+      <td> {{Object.countryCode}}</td>
+      <td> {{Object.capital}}</td>
+      <td> {{Object.countryName}}</td>
+
+    </tr>
+  </table>
