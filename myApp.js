@@ -85,7 +85,7 @@ var app = angular.module('myApp', ['ngRoute'])
   app.factory('neighbours',['$http',function($http){
     return function(countryCode){
       return $http({
-        url:'http://api.geonames.org/neighboursJSON?country='+ countryCode +'&username=thinkfulchris',
+        url:'https://api.geonames.org/neighboursJSON?country='+ countryCode +'&username=thinkfulchris',
         method:'JSONP'
       })
     }
@@ -98,7 +98,7 @@ var app = angular.module('myApp', ['ngRoute'])
     return function(countryCode){
 
     return $http({
-      url:'http://api.geonames.org/countryInfoJSON?username=thinkfulchris',
+      url:'https://api.geonames.org/countryInfoJSON?username=thinkfulchris',
       method: 'JSONP',
       params:{
         country: countryCode
@@ -115,7 +115,7 @@ var app = angular.module('myApp', ['ngRoute'])
 
       return function(){
         return $http ({
-          url:'http://api.geonames.org/countryInfoJSON?username=thinkfulchris',
+          url:'https://api.geonames.org/countryInfoJSON?username=thinkfulchris',
           method: 'JSONP',
           cache: true
 
